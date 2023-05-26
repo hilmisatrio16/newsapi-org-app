@@ -1,3 +1,5 @@
+@file:Suppress("unused", "unused")
+
 package com.example.newsapiapp.view.adapter
 
 import android.util.Log
@@ -7,18 +9,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapiapp.databinding.ItemSourceBinding
 import com.example.newsapiapp.model.article.Source
 
+@Suppress("unused")
 class SourceAdapter(private var listSource : List<Source>) : RecyclerView.Adapter<SourceAdapter.ViewHolder>() {
 
     var onClickSource : ((Source)-> Unit)? = null
 
     class ViewHolder(var binding: ItemSourceBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SourceAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = ItemSourceBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: SourceAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding.tvSourceNews.text = listSource[position].name
 
         holder.binding.itemSource.setOnClickListener {

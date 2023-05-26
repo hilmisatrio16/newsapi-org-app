@@ -10,11 +10,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+@Suppress("unused")
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkClient {
 
-    const val  BASE_URL = "https://newsapi.org/v2/"
+    private const val  BASE_URL = "https://newsapi.org/v2/"
 
 
     private  val logging : HttpLoggingInterceptor

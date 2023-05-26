@@ -1,15 +1,16 @@
+@file:Suppress("unused", "unused")
+
 package com.example.newsapiapp.view.adapter
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.newsapiapp.databinding.ItemCategoryBinding
 import com.example.newsapiapp.model.CategoryData
 
-class CategoryAdapter(var listCategory : List<CategoryData>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>(){
+@Suppress("unused")
+class CategoryAdapter(private var listCategory : List<CategoryData>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>(){
 
     var onClick : ((CategoryData)->Unit)? = null
 

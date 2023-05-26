@@ -1,16 +1,18 @@
+@file:Suppress("unused", "unused", "unused")
+
 package com.example.newsapiapp.view
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.newsapiapp.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.newsapiapp.databinding.ActivityDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("unused", "unused", "unused", "unused", "unused")
 @AndroidEntryPoint
 class DetailActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityDetailBinding
+    private lateinit var binding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

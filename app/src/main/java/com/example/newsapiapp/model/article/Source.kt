@@ -1,8 +1,11 @@
+@file:Suppress("unused", "unused", "unused")
+
 package com.example.newsapiapp.model.article
 
 
 import com.google.gson.annotations.SerializedName
 
+@Suppress("unused")
 data class Source(
     @SerializedName("category")
     val category: String,

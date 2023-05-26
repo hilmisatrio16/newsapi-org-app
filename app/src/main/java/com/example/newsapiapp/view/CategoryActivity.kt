@@ -14,8 +14,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CategoryActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityCategoryBinding
-    lateinit var categoryAdapter: CategoryAdapter
+    private lateinit var binding : ActivityCategoryBinding
+    private lateinit var categoryAdapter: CategoryAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class CategoryActivity : AppCompatActivity() {
     }
 
     private fun setRecycleview() {
-        var listCategoryNews = arrayListOf(
+        val listCategoryNews = arrayListOf(
             CategoryData("business", R.drawable.img_business),
             CategoryData("entertainment", R.drawable.img_entertainment),
             CategoryData("general", R.drawable.img_general),
@@ -46,10 +46,10 @@ class CategoryActivity : AppCompatActivity() {
         categoryAdapter.onClick = {
             Toast.makeText(this, "HAI", Toast.LENGTH_SHORT).show()
 
-            var bundle = Bundle().apply {
+            val bundle = Bundle().apply {
                 putString("category", it.name)
             }
-            var intent = Intent(this, SourceActivity::class.java)
+            val intent = Intent(this, SourceActivity::class.java)
             intent.putExtras(bundle)
             startActivity(intent)
         }

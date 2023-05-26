@@ -22,13 +22,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:src="@drawable/img_business"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/image" />
             <TextView
                 android:id="@+id/tvCategoryNews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="Category"
+                android:text="@string/category"
                 android:textSize="24sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppins_semibold"/>

@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.newsapiapp.model.article.Article
 import com.example.newsapiapp.model.article.ResponseDataArticle
 import com.example.newsapiapp.network.ApiService
-import com.example.newsapiapp.network.NetworkClient
 import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -13,15 +12,11 @@ import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class ArticleViewModel @Inject constructor(var api : ApiService) : ViewModel() {
+class ArticleViewModel @Inject constructor(private var api : ApiService) : ViewModel() {
 
-    lateinit var liveDataArticle : MutableLiveData<List<Article>>
+    var liveDataArticle : MutableLiveData<List<Article>?> = MutableLiveData()
 
-    init {
-        liveDataArticle = MutableLiveData()
-    }
-
-    fun getDataArticle() : MutableLiveData<List<Article>>{
+    fun getDataArticle() : MutableLiveData<List<Article>?>{
         return liveDataArticle
     }
 
